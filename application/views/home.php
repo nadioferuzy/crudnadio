@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Halaman Utama</title>
-</head>
-<body>
-	<h1>Simple CRUD</h1>
-	<a href="<?php echo base_url('/index.php/utama/halaman_tambah')?>">Tambah Data</a>
-	<br>
-	<br>
-	<table border = "1">
-	<tr>
-	<td>No</td>
-	<td>NIM</td>
-	<td>Nama</td>
-	<td>Jurusan</td>
-	<td>Aksi</td>
+	
+	<div class="container">
+		<div class="row"> 
+			<div class="col">
+			<h4>Simple CRUD</h4><hr>
+			
+	<table class = "table">
+	<thead class="thead-dark">
+		<tr>
+	<th scope="col">No</th>
+	<th scope="col">NIM</th>
+	<th scope="col">Nama</th>
+	<th scope="col">Jurusan</th>
+	<th scope="col">Aksi</th>
 	</tr>
+		</thead>
+	
 	<?php
 	$count = 0;
 	foreach ($queryAllmhs as $row) {
@@ -26,13 +22,16 @@
 	
 	?>
 	<tr>
-	<td><?php echo $count ?></td>
-	<td><?php echo $row->nim ?></td>
-	<td><?php echo $row->nama ?></td>
-	<td><?php echo $row->jurusan ?></td>
-	<td><a href="<?php echo base_url('/index.php/utama/halaman_edit')?>/<?php echo $row ->nim ?>">Edit</a> | <a href="<?php echo base_url('/index.php/utama/fungsiDelete')?>/<?php echo $row->nim?>">Delete</a> </td>
+	<th scope="col"><?php echo $count ?></th>
+	<th><?php echo $row->nim ?></th>
+	<th><?php echo $row->nama ?></th>
+	<th><?php echo $row->jurusan ?></th>
+	<th><a href="<?php echo base_url('/index.php/utama/halaman_edit')?>/<?php echo $row ->nim ?>" class="btn btn-primary">Edit</a> | <a href="<?php echo base_url('/index.php/utama/fungsiDelete')?>/<?php echo $row->nim?>" class="btn btn-danger">Delete</a> </th>
 	</tr>
+	
 	<?php } ?>
 	</table>
-</body>
-</html>
+	<a href="<?php echo base_url('/index.php/utama/halaman_tambah')?>" class="btn btn-primary">Tambah Data</a>
+	</div>
+	</div>
+	</div>

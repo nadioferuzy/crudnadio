@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data</title>
-</head>
-<body>
-    <h3>Halaman Tambah Data</h3>
-    <form action="<?php echo base_url('index.php/utama/fungsiTambah')?>" method="post">
-    <table>
-    <tr>
-    <td>Nim</td>
-    <td>:</td>
-    <td><input type="text" name="nim"></td>
-    </tr>
-    <tr>
-    <td>Nama</td>
-    <td>:</td>
-    <td><input type="text" name="nama"></td>
-    </tr>
-    <tr>
-    <td>Jurusan</td>
-    <td>:</td>
-    <td><input type="text" name="jurusan"></td>
-    </tr>
-    <td colspan="3"><button type="submit">Tambah Data</button></td>
-  
-    </tr>
-    </table>
+<div class="container mt-4">
+		<div class="row"> 
+			<div class="col">
+			<h4>Tambah Data Mahasiswa</h4><hr>
+    <form class="" action="<?php echo base_url('index.php/utama/fungsiTambah')?>" method="post">
+    <div class="form-group">
+    <label>Nim</label>
+    <input type="number" name="nim" value="" class="form-control">
+    </div>
+    <div class="form-group">
+    <label>Nama</label>
+    <input type="text" name="nama" value="" class="form-control">
+    </div>
+    <div class="form-group">
+    <label>jurusan</label>
+    <input type="text" name="jurusan" value="" class="form-control">
+    </div>
+   
+    <button type="submit" name="button" class="btn btn-primary">Tambah Data</button>
+
 </form>
-</body>
-</html>
+</div>
+</div>
+</div>

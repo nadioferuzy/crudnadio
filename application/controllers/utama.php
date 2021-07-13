@@ -10,16 +10,22 @@ class utama extends CI_Controller {
 	{
 		$queryAllMahasiswa = $this->m_mhs->getDataMahasiswa();
 		$DATA = array('queryAllmhs' => $queryAllMahasiswa);
+		$this->load->view('header');
 		$this->load->view('home', $DATA);
+		$this->load->view('footer');
 		//$this->load->view('home');
 	}
 	public function halaman_tambah() {
+		$this->load->view('header');
 		$this->load->view('tambah');
+		$this->load->view('footer');
 	}
 	public function halaman_edit($nim) {
 		$queryMahasiswaDetail =$this->m_mhs->getDataMahasiswaDetail($nim);
 		$DATA = array('queryMhsDetail' => $queryMahasiswaDetail);
+		$this->load->view('header');
 		$this->load->view('edit', $DATA);
+		$this->load->view('footer');
 	}
 	public function fungsiTambah(){
 		$nim = $this->input->post('nim');
